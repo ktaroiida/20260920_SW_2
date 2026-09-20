@@ -527,3 +527,23 @@ header.global-header.is-solid .header-logo-img {
 @media (max-width: 767px) {
   .header-logo-img { height: 44px !important; max-height: 44px !important; }
 }
+
+/* ====== Further Increase Logo & Header Size ====== */
+:root {
+  --header-height: 110px;
+}
+.header-logo-img {
+  height: 90px !important;
+  max-height: 90px !important;
+}
+
+@media (max-width: 767px) {
+  header.global-header {
+    height: 80px !important;
+    --header-height: 80px;
+  }
+  .header-logo-img {
+    height: 64px !important;
+    max-height: 64px !important;
+  }
+}
