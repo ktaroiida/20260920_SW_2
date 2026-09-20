@@ -481,3 +481,25 @@ footer .footer-links {
   .path-card { aspect-ratio: 3/4; }
   .secret-carousel-item { flex-basis: 88%; }
 }
+
+/* Brand Logo Image in Header */
+.header-logo-img {
+  height: 44px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  /* mix-blend-mode: multiply で生成り背景でも自然に見える */
+}
+@media (max-width: 767px) {
+  .header-logo-img { height: 36px; }
+}
+
+/* ヘッダー透明時（TOPページなど）はロゴを白抜きに */
+header.global-header[data-transparent="true"] .header-logo-img {
+  filter: invert(1) brightness(2);
+}
+/* スクロール後はJSがdata-transparentを書き換えるが、
+   それが間に合わない場合の補助としてis-solidクラスを使う */
+header.global-header.is-solid .header-logo-img {
+  filter: none;
+}

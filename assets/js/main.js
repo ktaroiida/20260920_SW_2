@@ -4,44 +4,42 @@
 
 (function () {
 
-  // ──────────────────────────────
-  // Fade-in (IntersectionObserver)
-  // ──────────────────────────────
+  // Fade-in
   const fadeEls = document.querySelectorAll('.fade-in');
   if (fadeEls.length) {
     const io = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('visible');
-      });
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.08 });
     fadeEls.forEach(el => io.observe(el));
   }
 
-  // ──────────────────────────────
-  // Header scroll effect
-  // ──────────────────────────────
+  // Header scroll effect (transparent → solid)
   const header = document.getElementById('global-header');
-  if (header) {
-    const isTransparent = header.dataset.transparent === 'true';
-    if (isTransparent) {
-      const onScroll = () => {
-        if (window.scrollY > 60) {
-          header.style.background = 'rgba(242, 239, 231, 0.97)';
-          header.style.color = '#1B1B19';
-          header.querySelectorAll('a').forEach(a => a.style.color = '');
-        } else {
-          header.style.background = 'transparent';
-          header.style.color = '#fff';
-          header.querySelectorAll('a').forEach(a => a.style.color = '#fff');
-        }
-      };
-      window.addEventListener('scroll', onScroll, { passive: true });
-    }
+  if (header && header.dataset.transparent === 'true') {
+    const setSolid = () => {
+      header.style.background = 'rgba(242, 239, 231, 0.97)';
+      header.style.color = '#1B1B19';
+      header.classList.add('is-solid');
+      // nav links color
+      header.querySelectorAll('.header-nav a').forEach(a => a.style.color = '');
+      // hamburger color
+      const toggle = header.querySelector('.menu-toggle');
+      if (toggle) toggle.style.color = '#1B1B19';
+    };
+    const setTransparent = () => {
+      header.style.background = 'transparent';
+      header.style.color = '#fff';
+      header.classList.remove('is-solid');
+      header.querySelectorAll('.header-nav a').forEach(a => a.style.color = '#fff');
+      const toggle = header.querySelector('.menu-toggle');
+      if (toggle) toggle.style.color = '#fff';
+    };
+    window.addEventListener('scroll', () => {
+      window.scrollY > 60 ? setSolid() : setTransparent();
+    }, { passive: true });
   }
 
-  // ──────────────────────────────
   // Hamburger menu
-  // ──────────────────────────────
   const toggle = document.querySelector('.menu-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
   const closeBtn = document.querySelector('.mobile-menu-close');
@@ -53,7 +51,6 @@
     document.body.style.overflow = 'hidden';
     closeBtn && closeBtn.focus();
   }
-
   function closeMenu() {
     mobileMenu.classList.remove('is-open');
     mobileMenu.setAttribute('aria-hidden', 'true');
@@ -64,18 +61,10 @@
 
   if (toggle && mobileMenu) {
     toggle.addEventListener('click', () => {
-      const isOpen = toggle.getAttribute('aria-expanded') === 'true';
-      isOpen ? closeMenu() : openMenu();
+      toggle.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
     });
-
     closeBtn && closeBtn.addEventListener('click', closeMenu);
-
-    // Close on nav link click
-    mobileMenu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', closeMenu);
-    });
-
-    // ESC key
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) closeMenu();
     });
