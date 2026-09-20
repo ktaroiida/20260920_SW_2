@@ -597,3 +597,20 @@ header.global-header.is-solid .header-logo-img {
     transform-origin: left center;
   }
 }
+
+/* ====== ADJUST LOGO PC (0.75x) ====== */
+@media (min-width: 768px) {
+  :root {
+    --header-height: 110px !important;
+  }
+  header.global-header {
+    height: 110px !important;
+  }
+  .header-logo {
+    height: 90px !important;
+  }
+  .header-logo-img {
+    height: 90px !important;
+    max-height: 90px !important;
+  }
+}
