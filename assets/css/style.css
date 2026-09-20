@@ -503,3 +503,11 @@ header.global-header[data-transparent="true"] .header-logo-img {
 header.global-header.is-solid .header-logo-img {
   filter: none;
 }
+/* Force logo size */
+.header-logo-img {
+  height: 18px !important;
+  max-height: 18px !important;
+}
+@media (max-width: 767px) {
+  .header-logo-img { height: 16px !important; max-height: 16px !important; }
+}
