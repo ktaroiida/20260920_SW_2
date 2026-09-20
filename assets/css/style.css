@@ -519,3 +519,11 @@ header.global-header.is-solid .header-logo-img {
 @media (max-width: 767px) {
   .header-logo-img { height: 32px !important; max-height: 32px !important; }
 }
+/* Adjust dog logo size for better visibility */
+.header-logo-img {
+  height: 60px !important;
+  max-height: 60px !important;
+}
+@media (max-width: 767px) {
+  .header-logo-img { height: 44px !important; max-height: 44px !important; }
+}
