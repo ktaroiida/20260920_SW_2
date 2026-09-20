@@ -575,3 +575,25 @@ header.global-header.is-solid .header-logo-img {
     max-height: 70px !important;
   }
 }
+
+/* ====== ULTRA ENLARGE LOGO PC ====== */
+@media (min-width: 768px) {
+  :root {
+    --header-height: 160px !important;
+  }
+  header.global-header {
+    height: 160px !important;
+  }
+  .header-logo {
+    height: 140px !important;
+    display: flex;
+    align-items: center;
+  }
+  .header-logo-img {
+    height: 140px !important;
+    max-height: 140px !important;
+    width: auto !important;
+    object-fit: contain;
+    transform-origin: left center;
+  }
+}
