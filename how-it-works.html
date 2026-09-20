@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOW IT WORKS | SAN-IN HIDDEN JAPAN</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="global-header" id="global-header" style="background: rgba(242, 239, 231, 0.95);">
+    <a href="index.html" class="header-logo en-serif">SAN-IN HIDDEN JAPAN</a>
+    <nav class="header-nav">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="shop.html">SHOP</a>
+      <a href="secret-box.html">SECRET BOX</a>
+      <a href="stories.html">STORIES</a>
+      <a href="vision.html">OUR VISION</a>
+      <a href="investors.html">FOR INVESTORS</a>
+    </nav>
+  </header>
+
+  <div class="interior-hero">
+    <h1>HOW IT WORKS</h1>
+    <p>お買い物の流れ</p>
+  </div>
+
+  <main class="container page-section fade-in">
+    
+        <div style="max-width: 800px; margin: 0 auto;">
+            <ul style="list-style: none; padding: 0;">
+                <li style="position: relative; padding-left: 4rem; margin-bottom: 4rem;">
+                    <span style="position: absolute; left: 0; top: 0; font-size: 2.5rem; color: var(--color-accent-gold); font-family: var(--font-en); font-weight: bold; line-height: 1;">01</span>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">商品、または SECRET BOX を選ぶ</h3>
+                    <p style="color: var(--color-text-sub); line-height: 1.8;">カタログからお好きな商品をご自身で選ぶか、価格帯別の「SECRET BOX（おまかせ箱）」を選択します。</p>
+                </li>
+                <li style="position: relative; padding-left: 4rem; margin-bottom: 4rem;">
+                    <span style="position: absolute; left: 0; top: 0; font-size: 2.5rem; color: var(--color-accent-gold); font-family: var(--font-en); font-weight: bold; line-height: 1;">02</span>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">注文する</h3>
+                    <p style="color: var(--color-text-sub); line-height: 1.8;">お届け先や決済情報を入力し、ご注文を確定します。<br>※SECRET BOXは定期便ではなく「都度購入」ですので、お好きなタイミングで気軽にご利用いただけます。</p>
+                </li>
+                <li style="position: relative; padding-left: 4rem; margin-bottom: 4rem;">
+                    <span style="position: absolute; left: 0; top: 0; font-size: 2.5rem; color: var(--color-accent-gold); font-family: var(--font-en); font-weight: bold; line-height: 1;">03</span>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">山陰から届く・開けて楽しむ</h3>
+                    <p style="color: var(--color-text-sub); line-height: 1.8;">現地の空気とともに、商品と「物語を記したジャーナル」が手元に届きます。生産者の思いや背景を知りながら、上質な体験をお楽しみください。</p>
+                </li>
+            </ul>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="shop.html" class="btn">買い物を始める</a>
+            </div>
+        </div>
+        
+  </main>
+
+  <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
+    <div class="container">
+      <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+        <a href="vision.html">OUR VISION</a>
+        <a href="investors.html">FOR INVESTORS</a>
+        <a href="how-it-works.html">HOW IT WORKS</a>
+      </div>
+      <p>※本サービスはプロトタイプです。</p>
+    </div>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>山陰柴犬プロダクト | SAN-IN HIDDEN JAPAN</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="global-header" id="global-header" style="background: rgba(242, 239, 231, 0.95);">
+    <a href="index.html" class="header-logo en-serif" style="">SAN-IN HIDDEN JAPAN</a>
+    <nav class="header-nav" style="">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="shop.html">SHOP</a>
+      <a href="secret-box.html">SECRET BOX</a>
+      <a href="stories.html">STORIES</a>
+      <a href="vision.html">OUR VISION</a>
+      <a href="investors.html">FOR INVESTORS</a>
+    </nav>
+  </header>
+
+  <div class="interior-hero"><h1>SHIBA INU</h1><p>山陰柴犬プロダクト</p></div>
+
+  
+  <main class="container page-section fade-in">
+    <p style="text-align:center; margin-bottom: 3rem;">ブランドの象徴である山陰柴犬。知られざる物語を日常に寄り添う形でお届けします。</p>
+    <div class="product-grid">
+        <a href="product-shiba-plush.html" class="product-card"><div class="img-wrap"><img src="assets/images/prod_shiba_plush_s.png"></div><h3>山陰柴犬 ミニぬいぐるみ</h3><p class="price">¥2,200</p></a>
+        <a href="javascript:void(0)" class="product-card"><div class="img-wrap"><img src="assets/images/prod_shiba_plush_m.png"></div><h3>山陰柴犬 ぬいぐるみ M</h3><p class="price">¥3,300</p></a>
+        <a href="javascript:void(0)" class="product-card"><div class="img-wrap"><img src="assets/images/prod_shiba_plush_l.png"></div><h3>山陰柴犬 ぬいぐるみ L</h3><p class="price">¥4,400</p></a>
+        <a href="javascript:void(0)" class="product-card"><div class="img-wrap"><img src="assets/images/prod_shiba_plush_big.png"></div><h3>山陰柴犬 BIGぬいぐるみ</h3><p class="price">¥6,600</p></a>
+        <a href="javascript:void(0)" class="product-card"><div class="img-wrap"><img src="assets/images/prod_shiba_keyholder.png"></div><h3>山陰柴犬 キーホルダー</h3><p class="price">¥1,100</p></a>
+        <a href="javascript:void(0)" class="product-card"><div class="img-wrap"><img src="assets/images/prod_shiba_cap.png"></div><h3>山陰柴犬 刺繍キャップ</h3><p class="price">¥3,300</p></a>
+        <a href="javascript:void(0)" class="product-card"><div class="img-wrap"><img src="assets/images/prod_shiba_tshirt.png"></div><h3>山陰柴犬 Tシャツ</h3><p class="price">¥3,800</p></a>
+        <a href="javascript:void(0)" class="product-card"><div class="img-wrap"><img src="assets/images/prod_shiba_totebag.png"></div><h3>山陰柴犬 トートバッグ</h3><p class="price">¥2,200</p></a>
+        <a href="javascript:void(0)" class="product-card"><div class="img-wrap"><img src="assets/images/prod_shiba_sticker.png"></div><h3>山陰柴犬 ステッカーセット</h3><p class="price">¥880</p></a>
+        <a href="javascript:void(0)" class="product-card"><div class="img-wrap"><img src="assets/images/prod_shiba_mug.png"></div><h3>山陰柴犬 マグカップ</h3><p class="price">¥2,200</p></a>
+    </div>
+  </main>
+
+
+  <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
+    <div class="container">
+      <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+        <a href="vision.html">OUR VISION</a>
+        <a href="investors.html">FOR INVESTORS</a>
+        <a href="how-it-works.html">HOW IT WORKS</a>
+      </div>
+      <p>※本サービスはプロトタイプです。</p>
+    </div>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    
+    const header = document.getElementById('global-header');
+    if(!header.style.background.includes('transparent')) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 100) { header.style.background = 'rgba(242, 239, 231, 0.95)'; header.style.color = '#1B1B19'; }
+        });
+    }
+  </script>
+</body>
+</html>

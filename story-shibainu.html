@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>山陰柴犬の物語 | SAN-IN HIDDEN JAPAN</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="global-header" id="global-header" style="background:transparent; color:#fff;">
+    <a href="index.html" class="header-logo en-serif" style="color:#fff;">SAN-IN HIDDEN JAPAN</a>
+    <nav class="header-nav" style="color:#fff;">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="shop.html">SHOP</a>
+      <a href="secret-box.html">SECRET BOX</a>
+      <a href="stories.html">STORIES</a>
+      <a href="vision.html">OUR VISION</a>
+      <a href="investors.html">FOR INVESTORS</a>
+    </nav>
+  </header>
+
+  
+  <div class="interior-hero" style="background-image: url('assets/images/shiba_epic.jpeg'); background-size: cover; background-position: center; min-height: 400px; position:relative;">
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:0;"></div>
+    <div style="position:relative; z-index:1;">
+      <h1>STORY 01</h1>
+      <p>消えかけた犬を、地域で守る。山陰柴犬の物語</p>
+    </div>
+  </div>
+
+
+  
+  <main class="container page-section fade-in">
+    <div class="story-article">
+        <p class="lead-copy" style="text-align:center; margin-bottom: 4rem;">SAN-IN HIDDEN JAPANの<br>ブランドの起点は、一匹の地犬でした。</p>
+        
+        <h2>山陰柴犬とは</h2>
+        <p>山陰柴犬は、鳥取・島根を中心とする山陰地方固有の柴犬です。一般的な柴犬に比べて、四肢が長くスリムで引き締まった体型が特徴とされています。毛色については、保存活動に関わる資料でも「赤」と表現されるように、美しい赤みを帯びた被毛を持っています。</p>
+        <p>その系統は、鳥取県東部で飼育されていた「因幡犬（いなばけん）」と、島根県西部で飼育されていた「石州犬（せきしゅうけん）」に由来します。時代の変遷とともに純粋な地犬が減っていく中、生き残った因幡犬を基礎として石州犬を交配し、現在の系統が残されました。</p>
+
+        <h2>絶滅の危機</h2>
+        <p>かつては猟犬や番犬として人々の暮らしのすぐそばにいた彼らですが、戦争や伝染病などの影響で、戦時中には一時約20頭まで減少したとも伝えられています。</p>
+        <p>この「絶滅の危機」を救ったのは、他でもない地域の人々でした。有志らが血統の保存に尽力し、生き残ったわずかな個体から少しずつ命を繋いできました。（なお、この過程で1947年に生まれた「太刀号」という個体が、現在の系統を残す上で重要な役割を果たしたと言われています）</p>
+
+        <h2>山陰柴犬育成会と、守る人々</h2>
+        <p>その後、平成6年ごろには約100頭まで回復したものの、高齢化などによって再び飼育者が減少する危機が訪れます。そこで2004年、地元有志によって「山陰柴犬育成会」が結成されました。</p>
+        <img src="assets/images/shiba_kentaro.png" alt="山陰柴犬と人" style="margin:2rem 0; width:100%;">
+        <p>現在では鑑賞会や品評会が定期的に開催され、繁殖や飼育者支援など、地道な保存活動が続けられています。この物語の主役は、犬そのものはもちろん、この小さな命を何代にもわたって「守っている人々」でもあります。彼らの情熱的な取り組みによって、近年の報道では約400〜500頭規模まで回復していると伝えられています。</p>
+
+        <h2>なぜSAN-IN HIDDEN JAPANなのか</h2>
+        <p>私たちが「山陰柴犬」に着目したのは、単に希少だからではありません。この犬が、地域の人々の並々ならぬ愛情と執念によって「現代に奇跡的に受け継がれている文化」そのものだからです。</p>
+        <p>山陰には、この犬のように「地元の人々に愛されながらも、外からは見えていない宝物」がたくさん眠っています。私たちは山陰柴犬をブランドの起点とし、彼らが生きる山陰の他の素晴らしい資源（工芸・食）を全国に届けていきます。</p>
+        
+        <div class="story-article-footer">
+          <a href="category-shiba.html" class="btn">山陰柴犬グッズを見る</a>
+        </div>
+    </div>
+  </main>
+
+
+  <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
+    <div class="container">
+      <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+        <a href="vision.html">OUR VISION</a>
+        <a href="investors.html">FOR INVESTORS</a>
+        <a href="how-it-works.html">HOW IT WORKS</a>
+      </div>
+      <p>※本サービスはプロトタイプです。</p>
+    </div>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    
+    const header = document.getElementById('global-header');
+    if(!header.style.background.includes('transparent')) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 100) { header.style.background = 'rgba(242, 239, 231, 0.95)'; header.style.color = '#1B1B19'; }
+        });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>因州和紙レターセット | SAN-IN HIDDEN JAPAN</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="global-header" id="global-header" style="background: rgba(242, 239, 231, 0.95);">
+    <a href="index.html" class="header-logo en-serif" style="">SAN-IN HIDDEN JAPAN</a>
+    <nav class="header-nav" style="">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="shop.html">SHOP</a>
+      <a href="secret-box.html">SECRET BOX</a>
+      <a href="stories.html">STORIES</a>
+      <a href="vision.html">OUR VISION</a>
+      <a href="investors.html">FOR INVESTORS</a>
+    </nav>
+  </header>
+
+  
+
+  
+  <div class="interior-hero"><h1>PRODUCT</h1><p>商品詳細</p></div>
+  <main class="container page-section fade-in">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; max-width: 1000px; margin: 0 auto;">
+        <div style="background: #fff; padding: 2rem; display: flex; align-items:center; justify-content:center; aspect-ratio: 1/1;">
+            <img src="assets/images/prod_craft_washi_letter.png" alt="因州和紙レターセット" style="width: 100%; object-fit: cover;">
+        </div>
+        <div>
+            <div style="color: var(--color-accent-gold); font-family: var(--font-en); letter-spacing: 0.1em; margin-bottom: 1rem;">CRAFT</div>
+            <h1 style="font-size: 2rem; margin-bottom: 1rem;">因州和紙レターセット</h1>
+            <p style="font-size: 1.5rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">¥1,800 <span style="font-size: 0.9rem; color:#999;">(税込)</span></p>
+            <p style="line-height: 2; margin-bottom: 2rem;">鳥取に伝わる因州和紙を使用した美しいレターセット。手すきの温もりが伝わります。</p>
+            <div style="background: rgba(0,0,0,0.03); padding: 2rem; margin-bottom: 2rem; border-left: 2px solid var(--color-indigo);">
+                <h4 style="font-family: var(--font-en); color: var(--color-indigo); margin-bottom: 0.5rem; letter-spacing: 0.1em;">WHY WE FOUND IT</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8;">1000年以上の歴史を持つ因州和紙。今の生活で一番使いやすい「手紙」という形でお届けします。</p>
+            </div>
+            <button class="btn" style="width: 100%;">カートに入れる</button>
+        </div>
+    </div>
+  </main>
+
+
+  <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
+    <div class="container">
+      <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+        <a href="vision.html">OUR VISION</a>
+        <a href="investors.html">FOR INVESTORS</a>
+        <a href="how-it-works.html">HOW IT WORKS</a>
+      </div>
+      <p>※本サービスはプロトタイプです。</p>
+    </div>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    
+    const header = document.getElementById('global-header');
+    if(!header.style.background.includes('transparent')) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 100) { header.style.background = 'rgba(242, 239, 231, 0.95)'; header.style.color = '#1B1B19'; }
+        });
+    }
+  </script>
+</body>
+</html>

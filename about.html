@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABOUT | SAN-IN HIDDEN JAPAN</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="global-header" id="global-header" style="background:transparent; color:#fff;">
+    <a href="index.html" class="header-logo en-serif" style="color:#fff;">SAN-IN HIDDEN JAPAN</a>
+    <nav class="header-nav" style="color:#fff;">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="shop.html">SHOP</a>
+      <a href="secret-box.html">SECRET BOX</a>
+      <a href="stories.html">STORIES</a>
+      <a href="vision.html">OUR VISION</a>
+      <a href="investors.html">FOR INVESTORS</a>
+    </nav>
+  </header>
+
+  
+  <div class="interior-hero" style="background-image: url('assets/images/shiba_epic.jpeg'); background-size: cover; background-position: center; min-height: 500px;">
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);"></div>
+    <div style="position:relative; z-index:1;">
+      <h1>ABOUT BRAND</h1>
+      <p>SAN-IN HIDDEN JAPANについて</p>
+    </div>
+  </div>
+
+
+  
+  <main class="container page-section fade-in">
+    <h2 class="section-title"><span class="en-serif">PHILOSOPHY</span>なぜ山陰なのか</h2>
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <p class="lead-copy">メディアではなく、<br>「商品を届けるブランド」であること。</p>
+        <p style="margin-bottom: 2rem; line-height: 2; text-align: left;">
+            私たちは、鳥取・島根を中心とした山陰地方に眠る、まだ広く知られていない日本の伝統・文化・地域資源を発掘し、その価値を現代の商品として再編集し、全国・世界へ届けていくブランドです。
+        </p>
+        <p style="margin-bottom: 2rem; line-height: 2; text-align: left;">
+            このブランドの出発点として私たちが着目したのが、山陰柴犬でした。彼らは単なる犬種ではなく、この土地の人々の暮らしの中で静かに受け継がれてきた「生きた文化」そのものでした。知られざる歴史や、それを守る人々の温かさに触れたとき、山陰にはこのような「まだ知られていない日本」が数多く存在することに気づきました。
+        </p>
+        <p style="margin-bottom: 3rem; line-height: 2; text-align: left;">
+            土地の恵み、受け継がれる技術、人々の物語。<br>
+            私たちは単なる情報を発信するメディアではなく、それらを確かな「商品」という手触りのある形にして、あなたの手元へお届けします。
+        </p>
+        <a href="story-shibainu.html" class="btn btn-outline">ブランドの原点・山陰柴犬の物語を読む</a>
+    </div>
+  </main>
+
+
+  <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
+    <div class="container">
+      <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+        <a href="vision.html">OUR VISION</a>
+        <a href="investors.html">FOR INVESTORS</a>
+        <a href="how-it-works.html">HOW IT WORKS</a>
+      </div>
+      <p>※本サービスはプロトタイプです。</p>
+    </div>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    
+    const header = document.getElementById('global-header');
+    if(!header.style.background.includes('transparent')) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 100) { header.style.background = 'rgba(242, 239, 231, 0.95)'; header.style.color = '#1B1B19'; }
+        });
+    }
+  </script>
+</body>
+</html>

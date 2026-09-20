@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FOR INVESTORS | SAN-IN HIDDEN JAPAN</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="global-header" id="global-header" style="background: rgba(242, 239, 231, 0.95);">
+    <a href="index.html" class="header-logo en-serif" style="">SAN-IN HIDDEN JAPAN</a>
+    <nav class="header-nav" style="">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="shop.html">SHOP</a>
+      <a href="secret-box.html">SECRET BOX</a>
+      <a href="stories.html">STORIES</a>
+      <a href="vision.html">OUR VISION</a>
+      <a href="investors.html">FOR INVESTORS</a>
+    </nav>
+  </header>
+
+  <div class="interior-hero"><h1>FOR INVESTORS</h1><p>投資家・協業先の皆様へ</p></div>
+
+  
+  <main class="container page-section fade-in">
+    <div style="max-width: 800px; margin: 0 auto;">
+        
+        <h2 class="section-title"><span class="en-serif">PROBLEM</span>課題</h2>
+        <p style="margin-bottom: 3rem; line-height: 2;">
+            山陰には優れた地域資源（工芸、食、文化）が多数存在しますが、アクセスや発信力の課題から、全国的にはその価値が十分に認知されていません。
+        </p>
+
+        <h2 class="section-title"><span class="en-serif">WHY SAN-IN</span>なぜ山陰なのか</h2>
+        <p style="margin-bottom: 3rem; line-height: 2;">
+            鳥取・島根は豊かな自然を背景に、食・手仕事の工芸・特有の文化が集積しています。未発掘であるからこそ、ブランドとしての「余白」と「神秘性」が保たれている強力な強みがあります。
+        </p>
+
+        <h2 class="section-title"><span class="en-serif">WHY NOW</span>なぜ今か</h2>
+        <p style="margin-bottom: 3rem; line-height: 2;">
+            地方EC、背景を重視するストーリー消費、プレミアムな体験を求めるギフト需要、そしてインバウンド観光の分散化など、地方のリアルな文化に対する関心がかつてなく高まっています。
+        </p>
+
+        <h2 class="section-title"><span class="en-serif">TARGET</span>想定顧客</h2>
+        <ul style="margin-bottom: 3rem; line-height: 2.2; padding-left: 1.5rem; list-style-type: disc;">
+            <li>地域の食・文化・手仕事に深い価値を感じる購入者</li>
+            <li>本物志向のギフト購入者</li>
+        </ul>
+        
+        <h2 class="section-title"><span class="en-serif">VALUE</span>提供価値</h2>
+        <p style="margin-bottom: 3rem; line-height: 2;">
+            単なるモノの消費ではなく、「知られざる日本を発見する」という体験価値（商品＋物語＋発見体験）と、生産者の背景を知る情緒的価値を提供します。
+        </p>
+
+        <h2 class="section-title"><span class="en-serif">REVENUE</span>収益モデル</h2>
+        <ul style="margin-bottom: 3rem; line-height: 2.2; padding-left: 1.5rem; list-style-type: disc;">
+            <li>商品販売（工芸品、食品、山陰柴犬グッズ）</li>
+            <li>SECRET BOX（都度購入型おまかせ箱）</li>
+            <li>将来的な共同開発商品</li>
+            <li>将来的な海外販売</li>
+        </ul>
+
+        <h2 class="section-title"><span class="en-serif">ROADMAP</span>今後の伸びしろ</h2>
+        <p style="line-height: 2;">
+            山陰柴犬というキャッチーかつ希少なアイコンを起点に集客を図りつつ、最終的にはLTV（顧客生涯価値）の高い「食」や「工芸品」のリピート購買へと繋げる導線を設計しています。（ロードマップの詳細は<a href="vision.html" style="color:var(--color-accent-gold); text-decoration:underline;">OUR VISION</a>をご覧ください）
+        </p>
+        
+        <div style="text-align: center; margin-top: 4rem; padding-top: 4rem; border-top: 1px solid #ddd;">
+            <p style="margin-bottom: 2rem;">事業詳細・協業に関するお問い合わせはこちら</p>
+            <a href="#" class="btn btn-outline">お問い合わせ（デモ）</a>
+        </div>
+    </div>
+  </main>
+
+
+  <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
+    <div class="container">
+      <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
+      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+        <a href="vision.html">OUR VISION</a>
+        <a href="investors.html">FOR INVESTORS</a>
+        <a href="how-it-works.html">HOW IT WORKS</a>
+      </div>
+      <p>※本サービスはプロトタイプです。</p>
+    </div>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    
+    const header = document.getElementById('global-header');
+    if(!header.style.background.includes('transparent')) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 100) { header.style.background = 'rgba(242, 239, 231, 0.95)'; header.style.color = '#1B1B19'; }
+        });
+    }
+  </script>
+</body>
+</html>
