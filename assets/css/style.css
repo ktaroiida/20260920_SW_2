@@ -547,3 +547,31 @@ header.global-header.is-solid .header-logo-img {
     max-height: 64px !important;
   }
 }
+
+/* ====== SUPER ENLARGE LOGO ====== */
+:root {
+  --header-height: 140px;
+}
+.header-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.header-logo-img {
+  height: 120px !important;
+  max-height: 120px !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  header.global-header {
+    height: 90px !important;
+    --header-height: 90px;
+  }
+  .header-logo-img {
+    height: 70px !important;
+    max-height: 70px !important;
+  }
+}
