@@ -8,8 +8,8 @@
 </head>
 <body>
   <header class="global-header" id="global-header" style="background: rgba(242, 239, 231, 0.95);">
-    <a href="index.html" class="header-logo en-serif" style="">SAN-IN HIDDEN JAPAN</a>
-    <nav class="header-nav" style="">
+    <a href="index.html" class="header-logo en-serif">SAN-IN HIDDEN JAPAN</a>
+    <nav class="header-nav">
       <a href="index.html">HOME</a>
       <a href="about.html">ABOUT</a>
       <a href="shop.html">SHOP</a>
@@ -18,7 +18,22 @@
       <a href="vision.html">OUR VISION</a>
       <a href="investors.html">FOR INVESTORS</a>
     </nav>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
+  <nav class="mobile-menu" aria-hidden="true" aria-label="モバイルメニュー">
+    <button class="mobile-menu-close" aria-label="メニューを閉じる">&#x2715;</button>
+    <div class="mobile-menu-brand">SAN-IN HIDDEN JAPAN</div>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="shop.html">SHOP</a>
+    <a href="secret-box.html">SECRET BOX</a>
+    <a href="stories.html">STORIES</a>
+    <a href="vision.html">OUR VISION</a>
+    <a href="investors.html">FOR INVESTORS</a>
+  </nav>
+  
 
   <div class="interior-hero"><h1>SHOP</h1><p>カテゴリ一覧</p></div>
 
@@ -26,19 +41,19 @@
   <main class="container page-section fade-in">
     <div class="category-grid">
         <a href="category-shiba.html" class="category-card">
-          <img src="assets/images/shiba_product.jpg" alt="山陰柴犬">
+          <img loading="lazy" src="assets/images/shiba_product.jpg" alt="山陰柴犬">
           <div class="category-info"><h3 class="category-title">山陰柴犬グッズ</h3><p class="text-content" style="font-size: 0.85rem;">ブランドの象徴。日常に寄り添うアイテム。</p></div>
         </a>
         <a href="category-craft.html" class="category-card">
-          <img src="assets/images/traditional_craft.jpg" alt="工芸品">
+          <img loading="lazy" src="assets/images/traditional_craft.jpg" alt="工芸品">
           <div class="category-info"><h3 class="category-title">伝統工芸品</h3><p class="text-content" style="font-size: 0.85rem;">山陰の手仕事。日々の暮らしを豊かに。</p></div>
         </a>
         <a href="category-food.html" class="category-card">
-          <img src="assets/images/prod_food_pear.png" alt="食品">
+          <img loading="lazy" src="assets/images/prod_food_pear.png" alt="食品">
           <div class="category-info"><h3 class="category-title">食品・特産品</h3><p class="text-content" style="font-size: 0.85rem;">季節ごとの極上の味覚。</p></div>
         </a>
         <a href="secret-box.html" class="category-card">
-          <img src="assets/images/secret_box_washi.jpg" alt="SECRET BOX">
+          <img loading="lazy" src="assets/images/secret_box_washi.jpg" alt="SECRET BOX">
           <div class="category-info"><h3 class="category-title">SECRET BOX</h3><p class="text-content" style="font-size: 0.85rem;">何が届くかはお楽しみ。</p></div>
         </a>
     </div>
@@ -48,7 +63,7 @@
   <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
     <div class="container">
       <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
-      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+      <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
         <a href="vision.html">OUR VISION</a>
         <a href="investors.html">FOR INVESTORS</a>
         <a href="how-it-works.html">HOW IT WORKS</a>
@@ -56,20 +71,7 @@
       <p>※本サービスはプロトタイプです。</p>
     </div>
   </footer>
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
-      });
-    });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    
-    const header = document.getElementById('global-header');
-    if(!header.style.background.includes('transparent')) {
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 100) { header.style.background = 'rgba(242, 239, 231, 0.95)'; header.style.color = '#1B1B19'; }
-        });
-    }
-  </script>
+  
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

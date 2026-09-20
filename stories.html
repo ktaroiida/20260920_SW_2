@@ -8,8 +8,8 @@
 </head>
 <body>
   <header class="global-header" id="global-header" style="background: rgba(242, 239, 231, 0.95);">
-    <a href="index.html" class="header-logo en-serif" style="">SAN-IN HIDDEN JAPAN</a>
-    <nav class="header-nav" style="">
+    <a href="index.html" class="header-logo en-serif">SAN-IN HIDDEN JAPAN</a>
+    <nav class="header-nav">
       <a href="index.html">HOME</a>
       <a href="about.html">ABOUT</a>
       <a href="shop.html">SHOP</a>
@@ -18,7 +18,22 @@
       <a href="vision.html">OUR VISION</a>
       <a href="investors.html">FOR INVESTORS</a>
     </nav>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
+  <nav class="mobile-menu" aria-hidden="true" aria-label="モバイルメニュー">
+    <button class="mobile-menu-close" aria-label="メニューを閉じる">&#x2715;</button>
+    <div class="mobile-menu-brand">SAN-IN HIDDEN JAPAN</div>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="shop.html">SHOP</a>
+    <a href="secret-box.html">SECRET BOX</a>
+    <a href="stories.html">STORIES</a>
+    <a href="vision.html">OUR VISION</a>
+    <a href="investors.html">FOR INVESTORS</a>
+  </nav>
+  
 
   
   <div class="interior-hero">
@@ -34,7 +49,7 @@
     </div>
     <div class="category-grid">
         <a href="story-shibainu.html" class="category-card" style="border: 1px solid #ddd; background: #fff; text-decoration: none; color: inherit; display: block;">
-            <img src="assets/images/shiba_epic.jpeg" alt="山陰柴犬" style="aspect-ratio:16/9; object-fit:cover;">
+            <img loading="lazy" src="assets/images/shiba_epic.jpeg" alt="山陰柴犬" style="aspect-ratio:16/9; object-fit:cover;">
             <div style="padding: 2rem;">
               <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">消えかけた犬を、地域で守る。</h3>
               <p style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; line-height: 1.8;">かつて絶滅の危機にあった山陰柴犬。地域の人々による長年の保存活動の物語。</p>
@@ -42,7 +57,7 @@
             </div>
         </a>
         <a href="story-ushinotoyaki.html" class="category-card" style="border: 1px solid #ddd; background: #fff; text-decoration: none; color: inherit; display: block;">
-            <img src="assets/images/ushinotoyaki_somewake.png" alt="牛ノ戸焼" style="aspect-ratio:16/9; object-fit:cover;">
+            <img loading="lazy" src="assets/images/ushinotoyaki_somewake.png" alt="牛ノ戸焼" style="aspect-ratio:16/9; object-fit:cover;">
             <div style="padding: 2rem;">
               <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">100年前から続く、地域の商品づくり。</h3>
               <p style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; line-height: 1.8;">吉田璋也が約100年前に牛ノ戸焼にもたらした、工芸のデザインとプロデュースの歴史。</p>
@@ -50,7 +65,7 @@
             </div>
         </a>
         <a href="story-shiroika.html" class="category-card" style="border: 1px solid #ddd; background: #fff; text-decoration: none; color: inherit; display: block;">
-            <img src="assets/images/squid_raw.png" alt="白いか" style="aspect-ratio:16/9; object-fit:cover;">
+            <img loading="lazy" src="assets/images/squid_raw.png" alt="白いか" style="aspect-ratio:16/9; object-fit:cover;">
             <div style="padding: 2rem;">
               <h3 style="font-size: 1.2rem; margin-bottom: 1rem;">夏の夜、海に灯りが浮かぶ。</h3>
               <p style="font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; line-height: 1.8;">極上の甘みを持つ白いかが私たちの食卓に届くまでの風景と、人々を魅了する力。</p>
@@ -64,7 +79,7 @@
   <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
     <div class="container">
       <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
-      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+      <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
         <a href="vision.html">OUR VISION</a>
         <a href="investors.html">FOR INVESTORS</a>
         <a href="how-it-works.html">HOW IT WORKS</a>
@@ -72,20 +87,7 @@
       <p>※本サービスはプロトタイプです。</p>
     </div>
   </footer>
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
-      });
-    });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    
-    const header = document.getElementById('global-header');
-    if(!header.style.background.includes('transparent')) {
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 100) { header.style.background = 'rgba(242, 239, 231, 0.95)'; header.style.color = '#1B1B19'; }
-        });
-    }
-  </script>
+  
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

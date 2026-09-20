@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="global-header" id="global-header" style="background:transparent; color:#fff;">
+  <header class="global-header" id="global-header" data-transparent="true" style="background:transparent; color:#fff;">
     <a href="index.html" class="header-logo en-serif" style="color:#fff;">SAN-IN HIDDEN JAPAN</a>
     <nav class="header-nav" style="color:#fff;">
       <a href="index.html">HOME</a>
@@ -18,7 +18,22 @@
       <a href="vision.html">OUR VISION</a>
       <a href="investors.html">FOR INVESTORS</a>
     </nav>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" style="color:#fff;">
+      <span></span><span></span><span></span>
+    </button>
   </header>
+  <nav class="mobile-menu" aria-hidden="true" aria-label="モバイルメニュー">
+    <button class="mobile-menu-close" aria-label="メニューを閉じる">&#x2715;</button>
+    <div class="mobile-menu-brand">SAN-IN HIDDEN JAPAN</div>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="shop.html">SHOP</a>
+    <a href="secret-box.html">SECRET BOX</a>
+    <a href="stories.html">STORIES</a>
+    <a href="vision.html">OUR VISION</a>
+    <a href="investors.html">FOR INVESTORS</a>
+  </nav>
+  
 
   
   <section class="hero">
@@ -49,7 +64,7 @@
     <h2 class="section-title"><span class="en-serif">EXPERIENCE</span>2つの出会い方</h2>
     <div class="dual-path">
       <a href="shop.html" class="path-card">
-        <img src="assets/images/catalog_selection.jpg" alt="自分で選ぶ">
+        <img loading="lazy" src="assets/images/catalog_selection.jpg" alt="自分で選ぶ">
         <div class="path-content">
           <h3>自分で選ぶ</h3>
           <p>山陰に眠る知られざる伝統、文化、味覚の中から、あなたが最も惹かれる物語を選んでください。山陰に息づく職人の手仕事や、極上の季節の味覚をご用意しています。</p>
@@ -57,7 +72,7 @@
         </div>
       </a>
       <a href="secret-box.html" class="path-card">
-        <img src="assets/images/secret_box_washi.jpg" alt="SECRET BOX">
+        <img loading="lazy" src="assets/images/secret_box_washi.jpg" alt="SECRET BOX">
         <div class="path-content">
           <h3>おまかせで楽しむ</h3>
           <p>何が届くかは、開けてからのお楽しみ。<br>私たちが現地で見つけ、心を動かされたその時期一番の価値あるものを、美しい和紙と木箱に包んで都度お届けします。</p>
@@ -74,7 +89,7 @@
       
       <!-- STORY 01 -->
       <div class="story-row">
-        <div class="story-img-wrap"><img src="assets/images/shiba_product.jpg" alt="山陰柴犬"></div>
+        <div class="story-img-wrap"><img loading="lazy" src="assets/images/shiba_product.jpg" alt="山陰柴犬"></div>
         <div class="story-text-wrap">
           <span class="story-number">STORY 01</span>
           <div class="story-meta">山陰柴犬</div>
@@ -86,7 +101,7 @@
 
       <!-- STORY 02 -->
       <div class="story-row reverse">
-        <div class="story-img-wrap"><img src="assets/images/ushinotoyaki_somewake.png" alt="牛ノ戸焼"></div>
+        <div class="story-img-wrap"><img loading="lazy" src="assets/images/ushinotoyaki_somewake.png" alt="牛ノ戸焼"></div>
         <div class="story-text-wrap">
           <span class="story-number">STORY 02</span>
           <div class="story-meta">工芸・牛ノ戸焼</div>
@@ -98,7 +113,7 @@
 
       <!-- STORY 03 -->
       <div class="story-row">
-        <div class="story-img-wrap"><img src="assets/images/squid_raw.png" alt="白いか"></div>
+        <div class="story-img-wrap"><img loading="lazy" src="assets/images/squid_raw.png" alt="白いか"></div>
         <div class="story-text-wrap">
           <span class="story-number">STORY 03</span>
           <div class="story-meta">食品・白いか</div>
@@ -117,7 +132,7 @@
       <h2 class="section-title"><span class="en-serif">CATEGORIES</span>箱に詰まる、山陰の物語。</h2>
       <div class="category-grid">
         <a href="category-shiba.html" class="category-card">
-          <img src="assets/images/shiba_product.jpg" alt="山陰柴犬グッズ">
+          <img loading="lazy" src="assets/images/shiba_product.jpg" alt="山陰柴犬グッズ">
           <div class="category-info">
             <div class="category-meta">ORIGIN</div>
             <h3 class="category-title">山陰柴犬グッズ</h3>
@@ -125,7 +140,7 @@
           </div>
         </a>
         <a href="category-craft.html" class="category-card">
-          <img src="assets/images/traditional_craft.jpg" alt="伝統工芸品">
+          <img loading="lazy" src="assets/images/traditional_craft.jpg" alt="伝統工芸品">
           <div class="category-info">
             <div class="category-meta">CRAFT</div>
             <h3 class="category-title">伝統工芸品</h3>
@@ -133,7 +148,7 @@
           </div>
         </a>
         <a href="category-food.html" class="category-card">
-          <img src="assets/images/prod_food_pear.png" alt="食品・特産品">
+          <img loading="lazy" src="assets/images/prod_food_pear.png" alt="食品・特産品">
           <div class="category-info">
             <div class="category-meta">FOOD</div>
             <h3 class="category-title">食品・特産品</h3>
@@ -141,7 +156,7 @@
           </div>
         </a>
         <a href="secret-box.html" class="category-card">
-          <img src="assets/images/secret_box_washi.jpg" alt="SECRET BOX">
+          <img loading="lazy" src="assets/images/secret_box_washi.jpg" alt="SECRET BOX">
           <div class="category-info">
             <div class="category-meta">SECRET</div>
             <h3 class="category-title">SECRET BOX</h3>
@@ -161,7 +176,7 @@
   <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
     <div class="container">
       <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
-      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+      <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
         <a href="vision.html">OUR VISION</a>
         <a href="investors.html">FOR INVESTORS</a>
         <a href="how-it-works.html">HOW IT WORKS</a>
@@ -169,20 +184,7 @@
       <p>※本サービスはプロトタイプです。</p>
     </div>
   </footer>
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
-      });
-    });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    
-    const header = document.getElementById('global-header');
-    if(!header.style.background.includes('transparent')) {
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 100) { header.style.background = 'rgba(242, 239, 231, 0.95)'; header.style.color = '#1B1B19'; }
-        });
-    }
-  </script>
+  
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

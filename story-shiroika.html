@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="global-header" id="global-header" style="background:transparent; color:#fff;">
+  <header class="global-header" id="global-header" data-transparent="true" style="background:transparent; color:#fff;">
     <a href="index.html" class="header-logo en-serif" style="color:#fff;">SAN-IN HIDDEN JAPAN</a>
     <nav class="header-nav" style="color:#fff;">
       <a href="index.html">HOME</a>
@@ -18,7 +18,22 @@
       <a href="vision.html">OUR VISION</a>
       <a href="investors.html">FOR INVESTORS</a>
     </nav>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" style="color:#fff;">
+      <span></span><span></span><span></span>
+    </button>
   </header>
+  <nav class="mobile-menu" aria-hidden="true" aria-label="モバイルメニュー">
+    <button class="mobile-menu-close" aria-label="メニューを閉じる">&#x2715;</button>
+    <div class="mobile-menu-brand">SAN-IN HIDDEN JAPAN</div>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="shop.html">SHOP</a>
+    <a href="secret-box.html">SECRET BOX</a>
+    <a href="stories.html">STORIES</a>
+    <a href="vision.html">OUR VISION</a>
+    <a href="investors.html">FOR INVESTORS</a>
+  </nav>
+  
 
   
   <div class="interior-hero" style="background-image: url('assets/images/hero_bg_starry.jpeg'); background-size: cover; background-position: center; min-height: 400px; position:relative;">
@@ -37,14 +52,14 @@
         
         <h2>夜の海に浮かぶ「漁火（いさりび）」</h2>
         <p>漆黒の日本海の水平線に、何十隻もの一本釣り漁船が点灯する「集魚灯」が等間隔に並びます。この「漁火」は、まるで海の上に光の道ができたかのように幻想的で、夏の鳥取の夜を象徴する風物詩として多くの人々を魅了しています。</p>
-        <img src="assets/images/squid_fisherman.png" alt="イカ漁" style="margin:2rem 0; width:100%;">
+        <img loading="lazy" src="assets/images/squid_fisherman.png" alt="イカ漁" style="margin:2rem 0; width:100%;">
 
         <h2>山陰の夏の主役、白いか</h2>
         <p>一般的には「ケンサキイカ」と呼ばれるこのイカは、山陰地方（特に鳥取県周辺）では親しみを込めて「白いか」と呼ばれています。初夏から秋にかけて旬を迎え、透き通るような美しい身を持っています。</p>
-        <img src="assets/images/squid_raw.png" alt="新鮮な白いか" style="margin:2rem 0; width:100%;">
+        <img loading="lazy" src="assets/images/squid_raw.png" alt="新鮮な白いか" style="margin:2rem 0; width:100%;">
         
         <p>その最大の特徴は、柔らかく、濃厚で、上品な甘みを持つことです。刺身はもちろん、天ぷらや煮付け、地元ならではの一夜干しなど、様々な味わい方で食卓を彩ります。</p>
-        <img src="assets/images/squid_sashimi.png" alt="白いかの刺身" style="margin:2rem 0; width:100%;">
+        <img loading="lazy" src="assets/images/squid_sashimi.png" alt="白いかの刺身" style="margin:2rem 0; width:100%;">
 
         <h2>食と風景が繋ぐ、山陰への想い</h2>
         <p>この極上の味と風景は、地元の人々だけのものに留まりません。「本場の白いかを食べたい」「あの漁火の風景を見たい」と、毎年夏になると遠方から多くの観光客が鳥取を訪れます。</p>
@@ -60,7 +75,7 @@
   <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
     <div class="container">
       <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
-      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+      <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
         <a href="vision.html">OUR VISION</a>
         <a href="investors.html">FOR INVESTORS</a>
         <a href="how-it-works.html">HOW IT WORKS</a>
@@ -68,20 +83,7 @@
       <p>※本サービスはプロトタイプです。</p>
     </div>
   </footer>
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
-      });
-    });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    
-    const header = document.getElementById('global-header');
-    if(!header.style.background.includes('transparent')) {
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 100) { header.style.background = 'rgba(242, 239, 231, 0.95)'; header.style.color = '#1B1B19'; }
-        });
-    }
-  </script>
+  
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

@@ -18,7 +18,22 @@
       <a href="vision.html">OUR VISION</a>
       <a href="investors.html">FOR INVESTORS</a>
     </nav>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </header>
+  <nav class="mobile-menu" aria-hidden="true" aria-label="モバイルメニュー">
+    <button class="mobile-menu-close" aria-label="メニューを閉じる">&#x2715;</button>
+    <div class="mobile-menu-brand">SAN-IN HIDDEN JAPAN</div>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="shop.html">SHOP</a>
+    <a href="secret-box.html">SECRET BOX</a>
+    <a href="stories.html">STORIES</a>
+    <a href="vision.html">OUR VISION</a>
+    <a href="investors.html">FOR INVESTORS</a>
+  </nav>
+  
 
   <div class="interior-hero">
     <h1>HOW IT WORKS</h1>
@@ -55,7 +70,7 @@
   <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
     <div class="container">
       <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
-      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+      <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
         <a href="vision.html">OUR VISION</a>
         <a href="investors.html">FOR INVESTORS</a>
         <a href="how-it-works.html">HOW IT WORKS</a>
@@ -63,13 +78,7 @@
       <p>※本サービスはプロトタイプです。</p>
     </div>
   </footer>
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
-      });
-    });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-  </script>
+  
+  <script src="assets/js/main.js"></script>
 </body>
 </html>

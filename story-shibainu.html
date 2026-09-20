@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <header class="global-header" id="global-header" style="background:transparent; color:#fff;">
+  <header class="global-header" id="global-header" data-transparent="true" style="background:transparent; color:#fff;">
     <a href="index.html" class="header-logo en-serif" style="color:#fff;">SAN-IN HIDDEN JAPAN</a>
     <nav class="header-nav" style="color:#fff;">
       <a href="index.html">HOME</a>
@@ -18,7 +18,22 @@
       <a href="vision.html">OUR VISION</a>
       <a href="investors.html">FOR INVESTORS</a>
     </nav>
+    <button class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" style="color:#fff;">
+      <span></span><span></span><span></span>
+    </button>
   </header>
+  <nav class="mobile-menu" aria-hidden="true" aria-label="モバイルメニュー">
+    <button class="mobile-menu-close" aria-label="メニューを閉じる">&#x2715;</button>
+    <div class="mobile-menu-brand">SAN-IN HIDDEN JAPAN</div>
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="shop.html">SHOP</a>
+    <a href="secret-box.html">SECRET BOX</a>
+    <a href="stories.html">STORIES</a>
+    <a href="vision.html">OUR VISION</a>
+    <a href="investors.html">FOR INVESTORS</a>
+  </nav>
+  
 
   
   <div class="interior-hero" style="background-image: url('assets/images/shiba_epic.jpeg'); background-size: cover; background-position: center; min-height: 400px; position:relative;">
@@ -45,7 +60,7 @@
 
         <h2>山陰柴犬育成会と、守る人々</h2>
         <p>その後、平成6年ごろには約100頭まで回復したものの、高齢化などによって再び飼育者が減少する危機が訪れます。そこで2004年、地元有志によって「山陰柴犬育成会」が結成されました。</p>
-        <img src="assets/images/shiba_kentaro.png" alt="山陰柴犬と人" style="margin:2rem 0; width:100%;">
+        <img loading="lazy" src="assets/images/shiba_kentaro.png" alt="山陰柴犬と人" style="margin:2rem 0; width:100%;">
         <p>現在では鑑賞会や品評会が定期的に開催され、繁殖や飼育者支援など、地道な保存活動が続けられています。この物語の主役は、犬そのものはもちろん、この小さな命を何代にもわたって「守っている人々」でもあります。彼らの情熱的な取り組みによって、近年の報道では約400〜500頭規模まで回復していると伝えられています。</p>
 
         <h2>なぜSAN-IN HIDDEN JAPANなのか</h2>
@@ -62,7 +77,7 @@
   <footer style="margin-top:0; padding: 4rem 2rem; background: #EBE7DD; color: var(--color-text-main);">
     <div class="container">
       <p class="en-serif" style="font-size: 1.5rem; margin-bottom: 1rem;">SAN-IN HIDDEN JAPAN</p>
-      <div style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
+      <div class="footer-links" style="display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; font-family: var(--font-ja-sans);">
         <a href="vision.html">OUR VISION</a>
         <a href="investors.html">FOR INVESTORS</a>
         <a href="how-it-works.html">HOW IT WORKS</a>
@@ -70,20 +85,7 @@
       <p>※本サービスはプロトタイプです。</p>
     </div>
   </footer>
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('visible'); }
-      });
-    });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    
-    const header = document.getElementById('global-header');
-    if(!header.style.background.includes('transparent')) {
-        window.addEventListener('scroll', () => {
-          if (window.scrollY > 100) { header.style.background = 'rgba(242, 239, 231, 0.95)'; header.style.color = '#1B1B19'; }
-        });
-    }
-  </script>
+  
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
