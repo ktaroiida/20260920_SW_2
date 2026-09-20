@@ -511,3 +511,11 @@ header.global-header.is-solid .header-logo-img {
 @media (max-width: 767px) {
   .header-logo-img { height: 16px !important; max-height: 16px !important; }
 }
+/* Force dog logo size */
+.header-logo-img {
+  height: 40px !important;
+  max-height: 40px !important;
+}
+@media (max-width: 767px) {
+  .header-logo-img { height: 32px !important; max-height: 32px !important; }
+}
